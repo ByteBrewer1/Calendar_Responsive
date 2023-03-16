@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar | Rahul Mistry</title>
+    <link rel="stylesheet" href="css/dycalendar.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="toggleBtn"></div>
+    <div class="box">
+        <div class="container">
+            <div id="dycalendar"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with ♥ by <a href="https://github.com/iusenotepadonly" target="_blank">Rahul Mistry</a></p>
+    </footer>
+
+    <script src="js/dycalendar.js"></script>
+    <script>
+        let toggleBtn = document.querySelector('.toggleBtn')
+        let body = document.querySelector('body')
+
+        dycalendar.draw({
+            target: '#dycalendar',
+            type: 'month',
+            highlighttargetdate: true,
+            prevnextbutton: 'show'
+        })
+
+        toggleBtn.onclick = function () {
+            body.classList.toggle('dark')
+        }
+    </script>
+</body>
+
+</html>
